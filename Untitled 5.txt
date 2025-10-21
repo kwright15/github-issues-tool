@@ -1,0 +1,50 @@
+PayPal Goods & Services
+
+ACL tickets: 2 3-day GA passes for weekend 1
+I have 2 3-day passes to ACL weekend 1. $425 each or $800 for both. I will only accept PayPal Goods & Services for payment; which protects the buyer and seller.
+
+Apr: 5039	3023
+May: 4473	2684
+Jun: gone
+
+BB-ZTZ97GYE9RV4
+
+I’m working to simplify our CSM/PM meeting cadences by combining the weekly CSM/PM interlock and the bi-weekly Product Scout calls into one weekly meeting. And I have split it up into two 30-min segments covering a subset of Data Platform portfolios as follows:
+30 min – wx.ai; wxO; wx.gov
+30 min – wx.data; CP4D
+
+Since IKC does not have many current GitHub issues; and only a few Product Scout issues approved by WW; I would like to propose that we just cover IKC vai Slack. I expect I will reach out to you (or whoever you delegate) every couple weeks or so to get updates. Does that work for you?
+
+
+---
+
+I’m working to simplify our CSM/PM meeting cadences for Product Managers by combining the weekly CSM/PM interlock and the bi-weekly Product Scout calls into one weekly meeting. And I have split it up into two 30-min segments covering a subset of Data Platform portfolios in each; but neither directly covers IKC (we do have CP4D; and might add wx.data Intelligence.) But since IKC does not have many current GitHub issues; and only a few Product Scout issues approved by WW; I would like to propose that we just cover IKC vai Slack. I expect I will reach out to you (or whoever you delegate) every couple weeks or so to get updates. Does that work for you?
+
+
+I am a WW Customer Success Practice Leader for Data Platform; and I lead a couple programs that require interlocks with Product Managers every week or two. The programs are:
+Weekly CSM/PM interlock to review product issues raised by Customer Success Managers (CSMs) that might be blocking a client deployment
+Bi-weekly Product Scout calls where we review the top enhancement Ideas/AHA requests raised by the field (pre or post sales)
+
+@Javier-Frances @juandiego-garciahernandez Please add customers; financial impact; and timeline needed to the Idea.
+ 
+Good
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZWY0MDZiYzItNDkyMy00YTBkLTliYzUtMjU5YmM3ZjJmM2Fh%40thread.v2/0?context=%7b%22Tid%22%3a%22fcf67057-50c9-4ad4-98f3-ffca64add9e9%22%2c%22Oid%22%3a%22d0a5b60b-0a57-40ad-be38-02228a2d0edc%22%7d
+
+Bad
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzM1Yjc5NDctMmEzOS00NTQyLTk4ZjUtY2U2MTJiOTYxMWQ1%40thread.v2/0?context=%7b%22Tid%22%3a%22fcf67057-50c9-4ad4-98f3-ffca64add9e9%22%2c%22Oid%22%3a%22d0a5b60b-0a57-40ad-be38-02228a2d0edc%22%7d
+
+https://ec.yourlearning.ibm.com/w3/event/10532660
+
+wx.ai API key:
+qMvMvNZWKRWRz1BNEtuJNkYZEEYevJKo6LjXir9wKpeh
+
+Project id
+76c32f63-e3e8-47f9-9908-2bd61565c477
+
+Project token
+p-2+UGuRNRNZQhnWZj7XKfsLHQ==;efHTmeU9jJqEUImTNYbRrw==:lBfqTCKHuhWjT7NfWtu61LC2tVHul4leFLG7TA7R9FawNIClF/IcZaRqmnwviyPOwKWHkZqaKmhSc0Dk/70U2+CRBWm47FzWNw==
+
+
+INC11537471
+
+
