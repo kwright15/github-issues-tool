@@ -1,0 +1,13 @@
+{
+  "monthly_issue_counts": {
+    "2025-01": 3
+  },
+  "time_to_close": {
+    "mean_days": 3,
+    "median_days": 3,
+    "min_days": 3,
+    "max_days": 3
+  },
+  "with_comments": 3,
+  "without_comments": 0
+}

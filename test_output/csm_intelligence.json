@@ -1,0 +1,18 @@
+{
+  "similar_issues": [
+    {
+      "number": 1,
+      "title": "Issue 1",
+      "url": "https://github.com/example/repo/issues/1"
+    }
+  ],
+  "status": "in_progress",
+  "recommended_tags": [
+    "bug",
+    "priority-medium"
+  ],
+  "next_steps": [
+    "Assign to PM",
+    "Request more information"
+  ]
+}

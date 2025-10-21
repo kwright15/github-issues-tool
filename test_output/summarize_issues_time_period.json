@@ -1,0 +1,13 @@
+{
+  "total_issues": 3,
+  "open_issues": 2,
+  "closed_issues": 1,
+  "time_period": "1m",
+  "by_tag": null,
+  "trending_themes": [
+    {
+      "word": "issue",
+      "count": 3
+    }
+  ]
+}

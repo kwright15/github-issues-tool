@@ -1,0 +1,17 @@
+[
+  {
+    "group_id": 1,
+    "issues": [
+      {
+        "number": 1,
+        "title": "Issue 1"
+      },
+      {
+        "number": 3,
+        "title": "Issue 3"
+      }
+    ],
+    "similarity_score": 0.85,
+    "recommendation": "Consider merging these issues"
+  }
+]
