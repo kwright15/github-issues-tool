@@ -1,0 +1,229 @@
+name: GitHub Issues Analyzer
+description: |
+  An agent that analyzes GitHub issues to provide insights, summaries, and recommendations.
+  Specifically designed for Customer Success Managers to track deployment blockers and other issues.
+
+tools:
+  - name: github_issues_summarize
+    description: Summarize GitHub issues by product, tag, or time period
+    parameters:
+      - name: repo
+        description: GitHub repository in format 'owner/repo'
+        type: string
+        required: true
+      - name: token
+        description: GitHub token (optional if GH_TOKEN env var is set)
+        type: string
+        required: false
+      - name: by_product
+        description: Whether to group by product
+        type: boolean
+        required: false
+        default: false
+      - name: by_tag
+        description: Whether to group by tag
+        type: boolean
+        required: false
+        default: false
+      - name: time_period
+        description: Time period to filter (e.g., '1w', '1m', '3m', '1y')
+        type: string
+        required: false
+
+  - name: github_issues_metrics
+    description: Analyze metrics like issue counts, time-to-close, and PM responsiveness
+    parameters:
+      - name: repo
+        description: GitHub repository in format 'owner/repo'
+        type: string
+        required: true
+      - name: token
+        description: GitHub token (optional if GH_TOKEN env var is set)
+        type: string
+        required: false
+
+  - name: github_issues_detect_similar
+    description: Detect similar or duplicate issues
+    parameters:
+      - name: repo
+        description: GitHub repository in format 'owner/repo'
+        type: string
+        required: true
+      - name: token
+        description: GitHub token (optional if GH_TOKEN env var is set)
+        type: string
+        required: false
+      - name: threshold
+        description: Similarity threshold (0.0 to 1.0)
+        type: number
+        required: false
+        default: 0.7
+
+  - name: github_issues_suggest_tags
+    description: Suggest tags based on issue content
+    parameters:
+      - name: repo
+        description: GitHub repository in format 'owner/repo'
+        type: string
+        required: true
+      - name: token
+        description: GitHub token (optional if GH_TOKEN env var is set)
+        type: string
+        required: false
+      - name: issue_number
+        description: Specific issue number to analyze, or None for all issues
+        type: integer
+        required: false
+
+  - name: github_issues_csm_intelligence
+    description: Provide CSM intelligence for new issues
+    parameters:
+      - name: issue_title
+        description: Title of the new issue
+        type: string
+        required: true
+      - name: issue_body
+        description: Body content of the new issue
+        type: string
+        required: true
+      - name: repo
+        description: GitHub repository in format 'owner/repo'
+        type: string
+        required: true
+      - name: token
+        description: GitHub token (optional if GH_TOKEN env var is set)
+        type: string
+        required: false
+
+instructions: |
+  You are a GitHub Issues Analyzer agent designed to help Customer Success Managers (CSMs) analyze GitHub issues.
+  
+  Your capabilities include:
+  
+  1. Summarization:
+     - Summarize issues by product, tag, or time period
+     - Highlight trends and recurring themes
+  
+  2. Analytics:
+     - Count of issues opened/closed in a timeframe
+     - Time-to-close metrics
+     - PM responsiveness (e.g., time to first comment)
+  
+  3. Deduplication & Similarity Detection:
+     - Flag similar or duplicate issues
+     - Suggest merging or linking related issues
+  
+  4. Tagging Intelligence:
+     - Suggest tags based on issue content
+  
+  5. CSM Intelligence:
+     - When a CSM creates a new issue:
+       - Suggest similar existing issues
+       - Indicate if the issue has been resolved or is in progress
+       - Recommend tags or next steps
+  
+  Always be helpful, concise, and provide actionable insights. When analyzing issues, focus on identifying patterns and providing recommendations that can help improve the development process and customer satisfaction.
+
+model:
+  provider: anthropic
+  name: claude-3-5-sonnet
+  parameters:
+    temperature: 0.2
+    max_tokens: 4000
+
+examples:
+  - user: |
+      Can you summarize the issues in the repository kwright15/github-issues-tool?
+    agent: |
+      I'll summarize the issues in the kwright15/github-issues-tool repository for you.
+
+      Let me analyze the issues using the github_issues_summarize tool.
+
+      Here's a summary of the issues in the repository:
+      
+      Total Issues: 3
+      Open Issues: 2
+      Closed Issues: 1
+      
+      Top Tags:
+      - bug: 2 issues
+      - enhancement: 1 issue
+      - documentation: 1 issue
+      
+      Trending Themes:
+      - "issue" appears in 3 issues
+      
+      Would you like me to provide more details about any specific aspect of these issues?
+
+  - user: |
+      What are the analytics for the issues in the repository?
+    agent: |
+      I'll analyze the metrics for issues in the repository.
+
+      Let me gather the analytics using the github_issues_metrics tool.
+
+      Here are the key metrics for the issues:
+      
+      Monthly Issue Counts:
+      - January 2025: 3 issues
+      
+      Time-to-Close Metrics:
+      - Mean: 3 days
+      - Median: 3 days
+      - Minimum: 3 days
+      - Maximum: 3 days
+      
+      Comment Activity:
+      - Issues with comments: 3
+      - Issues without comments: 0
+      
+      This data suggests consistent response times for closing issues, with all issues receiving comments.
+      
+      Would you like me to analyze any specific aspect of these metrics in more detail?
+
+  - user: |
+      Are there any similar issues in the repository?
+    agent: |
+      I'll check for similar or duplicate issues in the repository.
+
+      Let me analyze the issues using the github_issues_detect_similar tool.
+
+      I've found one group of similar issues:
+      
+      Group 1 (Similarity Score: 0.85):
+      - Issue #1: "Issue 1"
+      - Issue #3: "Issue 3"
+      
+      Recommendation: Consider merging these issues as they appear to be addressing the same topic.
+      
+      Would you like me to provide more details about these similar issues or check with a different similarity threshold?
+
+  - user: |
+      I'm creating a new issue with the title "Problem with API authentication" and body "I'm having trouble authenticating with the API. Getting 401 errors." Can you provide some guidance?
+    agent: |
+      I'll provide guidance for your new issue about API authentication problems.
+
+      Let me analyze this using the github_issues_csm_intelligence tool.
+
+      Based on my analysis of your new issue "Problem with API authentication":
+      
+      Similar Existing Issues:
+      - Issue #1: "Issue 1" (https://github.com/example/repo/issues/1)
+      
+      Status: This appears to be an in-progress issue that the team is already working on.
+      
+      Recommended Tags:
+      - bug
+      - priority-medium
+      
+      Next Steps:
+      1. Assign to PM for prioritization
+      2. Request more information about the specific API endpoint and authentication method you're using
+      
+      I recommend checking the similar issue first to see if it addresses your problem. If not, when creating your issue, include details about:
+      - The specific API endpoint you're trying to access
+      - The authentication method you're using
+      - Any error messages or response codes you're receiving
+      - Steps to reproduce the issue
+
+# Made with Bob
